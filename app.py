@@ -38,10 +38,7 @@ def send(text):
 
 
 def process_text(input):
-    if 'latest news' in input:
-        NewsFromBBC()
-    else:
-        pass
+    NewsFromBBC()
 
 def NewsFromBBC():
             main_url = " https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=6d206038549d4806a6f204441c6dd24e"
