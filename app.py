@@ -53,3 +53,4 @@ def NewsFromBBC():
 
             for i in range(1,len(results)+1):
                 send(i, results[i-1])
+process_text(message_body)
