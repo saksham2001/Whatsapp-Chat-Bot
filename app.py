@@ -12,6 +12,7 @@ def main_page():
 @app.route('/sms', methods=['POST'])
 def sms():
     message_body = request.form.get('Body')
+    return message_body
 
 if __name__ == '__main__':
     app.run()
@@ -23,7 +24,7 @@ auth_token = '0827fb256a3a0c6e64fa01f95c79d573'
 client = Client(account_sid,auth_token)
 
 test_message = client.messages.create(
-                              body='Hello there!',
+                              body='Hello Bruh!',
                               from_='whatsapp:+14155238886',
                               to='whatsapp:+919212151078'
                           )
@@ -39,6 +40,8 @@ def send(text):
 def process_text(input):
     if 'latest news' in input:
         NewsFromBBC()
+    else:
+        pass
 
 def NewsFromBBC():
             main_url = " https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=6d206038549d4806a6f204441c6dd24e"
