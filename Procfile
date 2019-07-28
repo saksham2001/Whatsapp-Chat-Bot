@@ -1,2 +1,2 @@
-web: python3 webhook.py
+web: gunicorn app:app
 web: python3 send_msg.py
