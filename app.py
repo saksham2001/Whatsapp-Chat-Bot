@@ -23,13 +23,6 @@ auth_token = '0827fb256a3a0c6e64fa01f95c79d573'
 
 client = Client(account_sid,auth_token)
 
-test_message = client.messages.create(
-                              body='Hello there!',
-                              from_='whatsapp:+14155238886',
-                              to='whatsapp:+919212151078'
-                          )
-
-
 def send(text):
     message = client.messages.create(
         body=text,
@@ -37,6 +30,19 @@ def send(text):
         to='whatsapp:+919212151078'
     )
 
+test_message = client.messages.create(
+                              body='Hello there!',
+                              from_='whatsapp:+14155238886',
+                              to='whatsapp:+919212151078'
+                          )
+
+send("*Welcome to WHATSAPP BOT SERVICE powered by Python*")
+send("_made by Saksham Bhutani_")
+send("Use the following Commands to use the BOT")
+send("*latest news* _to get all the top headline_")
+send("*science news* _to get all top news related to science_")
+send("*political news* _to get all the top news related to politics_")
+send("
 
 def process_text(input):
     if 'latest news' in input:
