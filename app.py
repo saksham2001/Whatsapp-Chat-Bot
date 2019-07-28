@@ -42,7 +42,13 @@ send("Use the following Commands to use the BOT")
 send("*latest news* _to get all the top headline_")
 send("*science news* _to get all top news related to science_")
 send("*political news* _to get all the top news related to politics_")
-send("
+send("*tech news*  _to get all top news related to latest technology_")
+send("*play song_name* _to play song from youtube_")
+send("*youtube video_name* _to get the link to a particular video_")
+send("*gif topic_of_gif* _to get a gif related to the topic_")
+send("*tell me a joke* or *joke* _to read a random joke_")
+send("*tell me a fact* or *fact* _to read a random fact_")
+send("*search anything* or *wikipedia* or anything  _to get some info about the topic_")
 
 def process_text(input):
     if 'latest news' in input:
