@@ -10,7 +10,7 @@ from_whatsapp_number = "whatsapp:+919212151078"
 to_whatsapp_number ="whatsapp:+14155238886"
 
 
-message = client.messages.create(
+intro = client.messages.create(
                               body='Hello there!',
                               from_='whatsapp:+14155238886',
                               to='whatsapp:+919212151078'
