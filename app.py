@@ -43,18 +43,18 @@ def process_text(input):
     
 
 def NewsFromBBC():
-            main_url = " https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=6d206038549d4806a6f204441c6dd24e"
+    main_url = " https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=6d206038549d4806a6f204441c6dd24e"
 
-            open_bbc_page = requests.get(main_url).json()
+    open_bbc_page = requests.get(main_url).json()
 
-            article = open_bbc_page["articles"]
-            results = []
+    article = open_bbc_page["articles"]
+    results = []
 
-            for ar in article:
-                results.append(ar["title"])
+    for ar in article:
+        results.append(ar["title"])
 
-            for i in range(1,len(results)+1):
-                send(i, results[i-1])
+    for i in range(1,len(results)+1):
+        send(i, results[i-1])
                 
                 
 process_text(message_body)
