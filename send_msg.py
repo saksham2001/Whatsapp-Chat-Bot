@@ -1,6 +1,5 @@
 import os
 from twilio.rest import Client
-import requests
 import webhook
 
 
