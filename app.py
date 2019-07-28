@@ -71,7 +71,7 @@ def process_text(input):
     elif 'joke' in input or 'tell me a joke' in input:
         joke()
     elif 'fact' in input or "tell me a fact" in input:
-        TechNews()
+        fact()
     else:
         search(input)
 
