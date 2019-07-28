@@ -36,9 +36,11 @@ def send(text):
         to='whatsapp:+919212151078'
     )
 
+send(message_body)
 
 def process_text(input):
     NewsFromBBC()
+    
 
 def NewsFromBBC():
             main_url = " https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=6d206038549d4806a6f204441c6dd24e"
@@ -53,4 +55,7 @@ def NewsFromBBC():
 
             for i in range(1,len(results)+1):
                 send(i, results[i-1])
+                
+                
 process_text(message_body)
+
