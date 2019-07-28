@@ -11,12 +11,7 @@ def main_page():
 
 @app.route('/sms', methods=['POST'])
 def sms():
-    number = request.form['From']
-    message_body = request.form['Body']
-
-    resp = twiml.Response()
-    resp.message('Hello {}, you said: {}'.format(number, message_body))
-    return str(resp)
+    message_body = request.form.get('Body')
 
 if __name__ == '__main__':
     app.run()
