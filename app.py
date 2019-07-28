@@ -7,6 +7,8 @@ app = Flask(__name__)
 @app.route('/')
 def main_page():
     return "Hello Bruh!"
+
+
 @app.route('/sms', methods=['POST'])
 def sms():
     message_body = request.form.get('Body')
