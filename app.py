@@ -53,8 +53,8 @@ def NewsFromBBC():
     for ar in article:
         results.append(ar["title"])
 
-    for i in range(1,len(results)+1):
-        send(i, results[i-1])
+    for i in range(len(results)):
+        send(i+1, results[i])
                 
                 
 process_text(message_body)
