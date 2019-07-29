@@ -149,7 +149,6 @@ def TechNews():
 def search(input):
     main_url= "https://api.duckduckgo.com/?skip_disambig=1&format=json&pretty=1&q="
     result = requests.get(main_url+input)
-    send("*"+result['Heading']+"*")
     send(result["Abstract"])
 
 def yt_player(input):
